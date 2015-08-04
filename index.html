@@ -1,0 +1,174 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>ValvKeep</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- For third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="bower_components/iids-dist/components/brandkit/favicon/favicon-144px.png">
+
+  <!-- For iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bower_components/iids-dist/components/brandkit/favicon/favicon-114px.png">
+
+  <!-- For first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="bower_components/iids-dist/components/brandkit/favicon/favicon-72px.png">
+
+  <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="bower_components/iids-dist/components/brandkit/favicon/favicon.png">
+  <link rel="icon" href="bower_components/iids-dist/components/brandkit/favicon/favicon.ico">
+  <link href="bower_components/ng-grid/ng-grid.css" rel="stylesheet" type="text/css">
+  <link href="bower_components/iids-dist/css/iids.css" rel="stylesheet" type="text/css">
+  <!--
+  <link href="bower_components/iids-dist/css/responsive.css" rel="stylesheet" type="text/css">
+
+  -->
+   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+   <!-- build:css(.tmp) styles/main.css -->
+  <!-- endbuild -->
+  <!--[if lt IE 9]>
+  <link id="theme-ie" href="bower_components/iids-dist/css/ie.css" rel="stylesheet" type="text/css">
+  <![endif]-->
+
+
+
+  <script src="bower_components/iids-dist/components/modernizr/modernizr.js"></script>
+
+</head>
+<body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+      <![endif]-->
+
+  <!-- GLOBAL NAV -->
+  <div class="navbar navbar-static-top" ng-controller="masthead">
+    <div ng-include src="navTemplateUrl"></div>
+  </div>
+
+   <!-- Main Content Area -->
+  <div id="MAIN_CONTENT" class=" ng-cloak" ng-view>main content</div>
+
+  <!-- Footer -->
+
+  <div class="footer" id="footer">
+    <div class="row-fluid">
+      <div class="span4"></div>
+      <div class="span4 copyright">&copy;{{year}} GENERAL ELECTRIC. All rights reserved.</div>
+
+    </div>
+  <!-- load css after inline ng grid css -->
+  <link rel="stylesheet" type="text/css" href="css/app.css">
+
+   <!-- DON'T USE JQUERY 2!!!! does not work with IE8 -->
+  <!--<script src="bower_components/jquery/jquery.js"></script>-->
+  <script src="bower_components/iids-dist/components/requirejs/require.js"></script>
+  <script src="bower_components/iids-dist/js/require.config.js"></script>
+
+  <script src="bower_components/angular/angular.js"></script>
+
+  <script src="scripts/app.js"></script>
+
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angularjs-modal-service/src/createDialog.js"></script>
+  <script src="bower_components/angular-translate/angular-translate.min.js"></script>
+  <script src="scripts/i18n-translation.js"></script>
+    <!-- <script src="bower_components/angular-i18n/angular-locale_en-us.js"></script> -->
+
+  <!-- YEOMAN GRUNT SCAFFOLDING COMMENTS -->
+  <!-- build:js scripts/modules.js -->
+  <script src="scripts/controllers/gridFilter.js"></script>
+  <script src="scripts/controllers/customer.js"></script>
+  <script src="scripts/controllers/customerDetail.js"></script>
+  <script src="scripts/controllers/repairs.js"></script>
+  <script src="scripts/controllers/repairDetail.js"></script>
+  <script src="scripts/controllers/reports.js"></script>
+  <script src="scripts/controllers/settings.js"></script>
+  <script src="scripts/controllers/valves.js"></script>
+  <script src="scripts/controllers/valveDetail.js"></script>
+  <script src="scripts/controllers/users.js"></script>
+  <script src="scripts/controllers/task.js"></script>
+  <script src="scripts/controllers/gridFooter.js"></script>
+  <script src="scripts/controllers/addGlobalMenuItems.js"></script>
+  <script src="scripts/controllers/tenants.js"></script>
+  <script src="scripts/controllers/valspeq.js"></script>
+  <script src="scripts/controllers/gedash.js"></script>
+  <script src="scripts/controllers/importdata.js"></script>
+  <script src="scripts/controllers/packages.js"></script>
+  <!-- endbuild -->
+
+  <!-- CONTROLLERS -->
+  <script src="scripts/controllers/masthead.js"></script>
+  <script src="scripts/controllers/userMessages.js"></script>
+
+    <!-- MODULES/DIRECTIVES -->
+  <!--<script src="scripts/directives/ngspinner.js"></script>-->
+
+    <!-- DIRECTIVES -->
+  <script src="scripts/directives/metaFormElement.js"></script>
+  <script src="scripts/directives/metaHeaderFormElement.js"></script>
+  <script src="scripts/directives/formfieldValidation.js"></script>
+  <script src="scripts/directives/detailGrid/detailGrid.js"></script>
+  <script src="scripts/directives/gridicons.js"></script>
+  <script src="scripts/directives/analytics/graphs.js"></script>
+  <script src="scripts/directives/contenteditable.js"></script>
+  <script src="scripts/directives/settings/settingsActions.js"></script>
+
+
+    <!-- FILTERS -->
+  <script type="text/javascript" src="scripts/filters/momentfilter.js"></script>
+
+  <!-- SERVICES -->
+  <script src="scripts/services/jsonService.js"></script>
+  <script src="scripts/services/state.js"></script>
+  <script src="scripts/services/validate.js"></script>
+  <script src="scripts/services/securityFactory.js"></script>
+  <script src="scripts/services/filterServices.js"></script>
+  <script src="scripts/services/gridServices.js"></script>
+  <script src="scripts/services/loginServices.js"></script>
+  <script src="scripts/services/genericsService.js"></script>
+  <script src="scripts/services/plantsService.js"></script>
+  <script src="scripts/services/tasksService.js"></script>
+  <script src="scripts/services/userService.js"></script>
+  <script src="scripts/services/partsandweldsService.js"></script>
+  <script src="scripts/services/repairService.js"></script>
+  <script src="scripts/services/menuService.js"></script>
+  <script src="scripts/services/analyticsService.js"></script>
+  <script src="scripts/services/settingsService.js"></script>
+  <script src="scripts/directives/chart-category.js"></script>
+  <script src="scripts/directives/chart-time-series.js"></script>
+  <script src="scripts/services/packagesService.js"></script>
+
+<!--
+  <script src="i18n/locale-default.js"></script>
+ -->
+  <script>
+    // Home sweet namespace
+    $ge = {};
+
+    require( [
+      'scripts/config.js'
+      ], function() {
+    // This is the equivalent of adding ng-app='<your app name>' to the document object,
+    // but because IIDS uses AMD we have to do this *after* everything has loaded.
+    angular.bootstrap(document, ['vkApp']);
+
+
+   });
+
+</script>
+
+
+</body>
+
+</html>
